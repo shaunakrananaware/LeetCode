@@ -9,7 +9,6 @@ public:
         if ( acsndBreaks != 0 &&
             nums[ nums.size()-1 ] > nums[0] ) acsndBreaks++;
 
-        if (acsndBreaks > 1) return false;
-        else return true;
+        return acsndBreaks <= 1;
     }
 };
