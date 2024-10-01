@@ -4,7 +4,7 @@ class Solution:
         for idx in nums:
             if idx in data:
                 return True
-            data[idx] = 1
+            data[idx] = None
 
         return False
 
