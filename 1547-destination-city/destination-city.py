@@ -1,11 +1,9 @@
 class Solution:
     def destCity(self, paths: List[List[str]]) -> str:
-        outgoing = set()
-        all_cities = set()
+        out = set()
 
-        for cities in paths:
-            outgoing.add(cities[0])
-            for city in cities: all_cities.add(city)
-
-        return all_cities.difference(outgoing).pop()
+        for src, _ in paths:
+            out.add(src)
         
+        for _, dst in paths:
+            if dst not in out: return dst
